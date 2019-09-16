@@ -4872,3 +4872,349 @@ Completed 200 OK in 128ms (Views: 124.1ms | ActiveRecord: 0.9ms)
   ↳ app/workers/records_worker.rb:9
   [1m[36mCsvUpload Load (0.4ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   ↳ app/workers/records_worker.rb:9
+  [1m[36mCsvUpload Load (1.0ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/workers/records_worker.rb:9
+  [1m[36mCsvUpload Load (1.7ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/workers/records_worker.rb:9
+  [1m[36mCsvUpload Load (2.4ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/workers/records_worker.rb:9
+  [1m[36mCsvUpload Load (1.5ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/workers/records_worker.rb:9
+  [1m[36mCsvUpload Load (1.7ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/workers/records_worker.rb:9
+  [1m[36mCsvUpload Load (0.8ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/workers/records_worker.rb:9
+  [1m[36mCsvUpload Load (0.7ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/workers/records_worker.rb:9
+  [1m[36mCsvUpload Load (1.7ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/workers/records_worker.rb:9
+  [1m[36mCsvUpload Load (1.1ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/workers/records_worker.rb:9
+  [1m[36mCsvUpload Load (3.9ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/workers/records_worker.rb:9
+  [1m[36mCsvUpload Load (4.1ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/workers/records_worker.rb:9
+  [1m[36mCsvUpload Load (2.1ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/workers/records_worker.rb:9
+  [1m[36mCsvUpload Load (2.8ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/workers/records_worker.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/records_worker.rb:16
+  [1m[36mCACHE CsvUpload Load (0.0ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/workers/records_worker.rb:16
+  [1m[36mRecord Create (3.4ms)[0m  [1m[32mINSERT INTO "records" ("first", "last", "phone", "email", "csv_upload_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first", "Greg"], ["last", "Cesnik"], ["phone", "7654321718"], ["email", "greg.cesnik@gmail.com"], ["csv_upload_id", 11], ["created_at", "2019-09-16 16:48:29.588602"], ["updated_at", "2019-09-16 16:48:29.588602"]]
+  ↳ app/workers/records_worker.rb:16
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/records_worker.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/records_worker.rb:16
+  [1m[36mCsvUpload Load (0.2ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/workers/records_worker.rb:16
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/workers/records_worker.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/records_worker.rb:18
+  [1m[36mCsvUpload Load (0.3ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/workers/records_worker.rb:18
+  [1m[36mImportError Create (0.5ms)[0m  [1m[32mINSERT INTO "import_errors" ("row_number", "error_message", "csv_upload_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["row_number", 2], ["error_message", "First can only be letters"], ["csv_upload_id", 11], ["created_at", "2019-09-16 16:48:29.616563"], ["updated_at", "2019-09-16 16:48:29.616563"]]
+  ↳ app/workers/records_worker.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/records_worker.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/records_worker.rb:16
+  [1m[36mCsvUpload Load (0.3ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/workers/records_worker.rb:16
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/workers/records_worker.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/records_worker.rb:18
+  [1m[36mCsvUpload Load (0.2ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/workers/records_worker.rb:18
+  [1m[36mImportError Create (0.4ms)[0m  [1m[32mINSERT INTO "import_errors" ("row_number", "error_message", "csv_upload_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["row_number", 3], ["error_message", "Last can't be present without a first name"], ["csv_upload_id", 11], ["created_at", "2019-09-16 16:48:29.622922"], ["updated_at", "2019-09-16 16:48:29.622922"]]
+  ↳ app/workers/records_worker.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/records_worker.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/records_worker.rb:16
+  [1m[36mCsvUpload Load (0.2ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/workers/records_worker.rb:16
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/workers/records_worker.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/records_worker.rb:18
+  [1m[36mCsvUpload Load (0.2ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/workers/records_worker.rb:18
+  [1m[36mImportError Create (0.3ms)[0m  [1m[32mINSERT INTO "import_errors" ("row_number", "error_message", "csv_upload_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["row_number", 4], ["error_message", "Phone number must be valid"], ["csv_upload_id", 11], ["created_at", "2019-09-16 16:48:29.633574"], ["updated_at", "2019-09-16 16:48:29.633574"]]
+  ↳ app/workers/records_worker.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/records_worker.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/records_worker.rb:16
+  [1m[36mCsvUpload Load (0.1ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/workers/records_worker.rb:16
+  [1m[36mRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "records" ("first", "last", "phone", "email", "csv_upload_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first", "Greg"], ["last", "Cesnik"], ["phone", "1234568888"], ["email", "greg.cesnik@gmail.com"], ["csv_upload_id", 11], ["created_at", "2019-09-16 16:48:29.639239"], ["updated_at", "2019-09-16 16:48:29.639239"]]
+  ↳ app/workers/records_worker.rb:16
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/records_worker.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/records_worker.rb:16
+  [1m[36mCsvUpload Load (0.2ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/workers/records_worker.rb:16
+  [1m[36mRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "records" ("first", "last", "phone", "email", "csv_upload_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first", "Greg"], ["last", "Cesnik"], ["phone", "8764445523"], ["email", "greg.cesnik@gmail.com"], ["csv_upload_id", 11], ["created_at", "2019-09-16 16:48:29.644184"], ["updated_at", "2019-09-16 16:48:29.644184"]]
+  ↳ app/workers/records_worker.rb:16
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/records_worker.rb:16
+Started GET "/sidekiq/retries" for 127.0.0.1 at 2019-09-16 11:48:40 -0500
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2019-09-16 11:48:41 -0500
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2019-09-16 11:48:41 -0500
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2019-09-16 11:48:41 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Started GET "/sidekiq/images/status.png" for 127.0.0.1 at 2019-09-16 11:48:41 -0500
+Started GET "/sidekiq/images/favicon.ico" for 127.0.0.1 at 2019-09-16 11:48:41 -0500
+Started POST "/sidekiq/retries/all/kill" for 127.0.0.1 at 2019-09-16 11:48:49 -0500
+Started GET "/sidekiq/retries" for 127.0.0.1 at 2019-09-16 11:48:49 -0500
+Started GET "/csv_uploads" for 127.0.0.1 at 2019-09-16 11:49:09 -0500
+Processing by CsvUploadsController#index as HTML
+  Rendering csv_uploads/index.html.erb within layouts/application
+  [1m[36mCsvUpload Load (1.6ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads" ORDER BY "csv_uploads"."created_at" DESC[0m
+  ↳ app/views/csv_uploads/index.html.erb:1
+  [1m[36mRecord Load (0.5ms)[0m  [1m[34mSELECT "records".* FROM "records" WHERE "records"."csv_upload_id" = $1[0m  [["csv_upload_id", 11]]
+  ↳ app/views/csv_uploads/index.html.erb:13
+  [1m[36mImportError Load (0.4ms)[0m  [1m[34mSELECT "import_errors".* FROM "import_errors" WHERE "import_errors"."csv_upload_id" = $1[0m  [["csv_upload_id", 11]]
+  ↳ app/views/csv_uploads/index.html.erb:23
+  Rendered csv_uploads/index.html.erb within layouts/application (58.5ms)
+Completed 200 OK in 481ms (Views: 451.6ms | ActiveRecord: 17.5ms)
+
+
+Started GET "/csv_uploads/delete_all" for 127.0.0.1 at 2019-09-16 11:49:13 -0500
+Processing by CsvUploadsController#delete_all as HTML
+  [1m[36mCsvUpload Load (0.7ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  ↳ app/controllers/csv_uploads_controller.rb:22
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/csv_uploads_controller.rb:22
+  [1m[36mRecord Load (0.5ms)[0m  [1m[34mSELECT "records".* FROM "records" WHERE "records"."csv_upload_id" = $1[0m  [["csv_upload_id", 11]]
+  ↳ app/controllers/csv_uploads_controller.rb:22
+  [1m[36mRecord Destroy (0.7ms)[0m  [1m[31mDELETE FROM "records" WHERE "records"."id" = $1[0m  [["id", 22]]
+  ↳ app/controllers/csv_uploads_controller.rb:22
+  [1m[36mRecord Destroy (0.5ms)[0m  [1m[31mDELETE FROM "records" WHERE "records"."id" = $1[0m  [["id", 23]]
+  ↳ app/controllers/csv_uploads_controller.rb:22
+  [1m[36mRecord Destroy (0.4ms)[0m  [1m[31mDELETE FROM "records" WHERE "records"."id" = $1[0m  [["id", 24]]
+  ↳ app/controllers/csv_uploads_controller.rb:22
+  [1m[36mRecord Destroy (0.4ms)[0m  [1m[31mDELETE FROM "records" WHERE "records"."id" = $1[0m  [["id", 25]]
+  ↳ app/controllers/csv_uploads_controller.rb:22
+  [1m[36mRecord Destroy (0.3ms)[0m  [1m[31mDELETE FROM "records" WHERE "records"."id" = $1[0m  [["id", 26]]
+  ↳ app/controllers/csv_uploads_controller.rb:22
+  [1m[36mRecord Destroy (0.4ms)[0m  [1m[31mDELETE FROM "records" WHERE "records"."id" = $1[0m  [["id", 27]]
+  ↳ app/controllers/csv_uploads_controller.rb:22
+  [1m[36mImportError Load (0.4ms)[0m  [1m[34mSELECT "import_errors".* FROM "import_errors" WHERE "import_errors"."csv_upload_id" = $1[0m  [["csv_upload_id", 11]]
+  ↳ app/controllers/csv_uploads_controller.rb:22
+  [1m[36mImportError Destroy (0.4ms)[0m  [1m[31mDELETE FROM "import_errors" WHERE "import_errors"."id" = $1[0m  [["id", 24]]
+  ↳ app/controllers/csv_uploads_controller.rb:22
+  [1m[36mImportError Destroy (0.5ms)[0m  [1m[31mDELETE FROM "import_errors" WHERE "import_errors"."id" = $1[0m  [["id", 25]]
+  ↳ app/controllers/csv_uploads_controller.rb:22
+  [1m[36mImportError Destroy (0.5ms)[0m  [1m[31mDELETE FROM "import_errors" WHERE "import_errors"."id" = $1[0m  [["id", 26]]
+  ↳ app/controllers/csv_uploads_controller.rb:22
+  [1m[36mImportError Destroy (0.4ms)[0m  [1m[31mDELETE FROM "import_errors" WHERE "import_errors"."id" = $1[0m  [["id", 27]]
+  ↳ app/controllers/csv_uploads_controller.rb:22
+  [1m[36mImportError Destroy (0.3ms)[0m  [1m[31mDELETE FROM "import_errors" WHERE "import_errors"."id" = $1[0m  [["id", 28]]
+  ↳ app/controllers/csv_uploads_controller.rb:22
+  [1m[36mImportError Destroy (0.4ms)[0m  [1m[31mDELETE FROM "import_errors" WHERE "import_errors"."id" = $1[0m  [["id", 29]]
+  ↳ app/controllers/csv_uploads_controller.rb:22
+  [1m[36mCsvUpload Destroy (0.4ms)[0m  [1m[31mDELETE FROM "csv_uploads" WHERE "csv_uploads"."id" = $1[0m  [["id", 11]]
+  ↳ app/controllers/csv_uploads_controller.rb:22
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/csv_uploads_controller.rb:22
+Redirected to http://localhost:3000/csv_uploads/new
+Completed 302 Found in 25ms (ActiveRecord: 7.8ms)
+
+
+Started GET "/csv_uploads/new" for 127.0.0.1 at 2019-09-16 11:49:13 -0500
+Processing by CsvUploadsController#new as HTML
+  Rendering csv_uploads/new.html.erb within layouts/application
+  Rendered csv_uploads/new.html.erb within layouts/application (50.1ms)
+Completed 200 OK in 110ms (Views: 107.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/csv_uploads" for 127.0.0.1 at 2019-09-16 11:49:17 -0500
+Processing by CsvUploadsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0Za0mr+cq+lyNSVaiPKHLPct1HUzwH1ykyP4etYFKPYWOvBukTta9XNDNEVys9RN34+BDhbHalmnDqwdmEHFLg==", "csv_upload"=>{"identifier"=>"dwdwd", "csv"=>#<ActionDispatch::Http::UploadedFile:0x00007fd63471b4b8 @tempfile=#<Tempfile:/var/folders/q5/gpbpndhn2434n32bs41_tctw0000gn/T/RackMultipart20190916-36054-uyebt8.numbers>, @original_filename="test_csv.numbers", @content_type="application/x-iwork-numbers-sffnumbers", @headers="Content-Disposition: form-data; name=\"csv_upload[csv]\"; filename=\"test_csv.numbers\"\r\nContent-Type: application/x-iwork-numbers-sffnumbers\r\n">}, "commit"=>"Create Csv upload"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/csv_uploads_controller.rb:13
+  [1m[36mCsvUpload Create (0.8ms)[0m  [1m[32mINSERT INTO "csv_uploads" ("identifier", "csv", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["identifier", "dwdwd"], ["csv", "test_csv.numbers"], ["created_at", "2019-09-16 16:49:17.586046"], ["updated_at", "2019-09-16 16:49:17.586046"]]
+  ↳ app/controllers/csv_uploads_controller.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/csv_uploads_controller.rb:13
+Redirected to http://localhost:3000/csv_uploads
+Completed 302 Found in 34ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/csv_uploads" for 127.0.0.1 at 2019-09-16 11:49:17 -0500
+Processing by CsvUploadsController#index as HTML
+  Rendering csv_uploads/index.html.erb within layouts/application
+  [1m[36mCsvUpload Load (0.4ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads" ORDER BY "csv_uploads"."created_at" DESC[0m
+  ↳ app/views/csv_uploads/index.html.erb:1
+  [1m[36mRecord Load (0.3ms)[0m  [1m[34mSELECT "records".* FROM "records" WHERE "records"."csv_upload_id" = $1[0m  [["csv_upload_id", 12]]
+  ↳ app/views/csv_uploads/index.html.erb:13
+  [1m[36mImportError Load (0.2ms)[0m  [1m[34mSELECT "import_errors".* FROM "import_errors" WHERE "import_errors"."csv_upload_id" = $1[0m  [["csv_upload_id", 12]]
+  ↳ app/views/csv_uploads/index.html.erb:23
+  Rendered csv_uploads/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 68ms (Views: 64.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/csv_uploads" for 127.0.0.1 at 2019-09-16 11:49:22 -0500
+Processing by CsvUploadsController#index as HTML
+  Rendering csv_uploads/index.html.erb within layouts/application
+  [1m[36mCsvUpload Load (0.5ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads" ORDER BY "csv_uploads"."created_at" DESC[0m
+  ↳ app/views/csv_uploads/index.html.erb:1
+  [1m[36mRecord Load (0.3ms)[0m  [1m[34mSELECT "records".* FROM "records" WHERE "records"."csv_upload_id" = $1[0m  [["csv_upload_id", 12]]
+  ↳ app/views/csv_uploads/index.html.erb:13
+  [1m[36mImportError Load (0.3ms)[0m  [1m[34mSELECT "import_errors".* FROM "import_errors" WHERE "import_errors"."csv_upload_id" = $1[0m  [["csv_upload_id", 12]]
+  ↳ app/views/csv_uploads/index.html.erb:23
+  Rendered csv_uploads/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 75ms (Views: 71.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/csv_uploads" for 127.0.0.1 at 2019-09-16 11:49:24 -0500
+Processing by CsvUploadsController#index as HTML
+  Rendering csv_uploads/index.html.erb within layouts/application
+  [1m[36mCsvUpload Load (0.4ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads" ORDER BY "csv_uploads"."created_at" DESC[0m
+  ↳ app/views/csv_uploads/index.html.erb:1
+  [1m[36mRecord Load (0.3ms)[0m  [1m[34mSELECT "records".* FROM "records" WHERE "records"."csv_upload_id" = $1[0m  [["csv_upload_id", 12]]
+  ↳ app/views/csv_uploads/index.html.erb:13
+  [1m[36mImportError Load (0.4ms)[0m  [1m[34mSELECT "import_errors".* FROM "import_errors" WHERE "import_errors"."csv_upload_id" = $1[0m  [["csv_upload_id", 12]]
+  ↳ app/views/csv_uploads/index.html.erb:23
+  Rendered csv_uploads/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 76ms (Views: 72.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/csv_uploads" for 127.0.0.1 at 2019-09-16 11:49:25 -0500
+Processing by CsvUploadsController#index as HTML
+  Rendering csv_uploads/index.html.erb within layouts/application
+  [1m[36mCsvUpload Load (0.4ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads" ORDER BY "csv_uploads"."created_at" DESC[0m
+  ↳ app/views/csv_uploads/index.html.erb:1
+  [1m[36mRecord Load (0.3ms)[0m  [1m[34mSELECT "records".* FROM "records" WHERE "records"."csv_upload_id" = $1[0m  [["csv_upload_id", 12]]
+  ↳ app/views/csv_uploads/index.html.erb:13
+  [1m[36mImportError Load (0.3ms)[0m  [1m[34mSELECT "import_errors".* FROM "import_errors" WHERE "import_errors"."csv_upload_id" = $1[0m  [["csv_upload_id", 12]]
+  ↳ app/views/csv_uploads/index.html.erb:23
+  Rendered csv_uploads/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 51ms (Views: 47.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/csv_uploads" for 127.0.0.1 at 2019-09-16 11:49:25 -0500
+Processing by CsvUploadsController#index as HTML
+  Rendering csv_uploads/index.html.erb within layouts/application
+  [1m[36mCsvUpload Load (0.4ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads" ORDER BY "csv_uploads"."created_at" DESC[0m
+  ↳ app/views/csv_uploads/index.html.erb:1
+  [1m[36mRecord Load (0.2ms)[0m  [1m[34mSELECT "records".* FROM "records" WHERE "records"."csv_upload_id" = $1[0m  [["csv_upload_id", 12]]
+  ↳ app/views/csv_uploads/index.html.erb:13
+  [1m[36mImportError Load (0.2ms)[0m  [1m[34mSELECT "import_errors".* FROM "import_errors" WHERE "import_errors"."csv_upload_id" = $1[0m  [["csv_upload_id", 12]]
+  ↳ app/views/csv_uploads/index.html.erb:23
+  Rendered csv_uploads/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 71ms (Views: 66.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/csv_uploads" for 127.0.0.1 at 2019-09-16 11:49:26 -0500
+Processing by CsvUploadsController#index as HTML
+  Rendering csv_uploads/index.html.erb within layouts/application
+  [1m[36mCsvUpload Load (0.4ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads" ORDER BY "csv_uploads"."created_at" DESC[0m
+  ↳ app/views/csv_uploads/index.html.erb:1
+  [1m[36mRecord Load (0.2ms)[0m  [1m[34mSELECT "records".* FROM "records" WHERE "records"."csv_upload_id" = $1[0m  [["csv_upload_id", 12]]
+  ↳ app/views/csv_uploads/index.html.erb:13
+  [1m[36mImportError Load (0.2ms)[0m  [1m[34mSELECT "import_errors".* FROM "import_errors" WHERE "import_errors"."csv_upload_id" = $1[0m  [["csv_upload_id", 12]]
+  ↳ app/views/csv_uploads/index.html.erb:23
+  Rendered csv_uploads/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 59ms (Views: 56.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/csv_uploads" for 127.0.0.1 at 2019-09-16 11:49:27 -0500
+Processing by CsvUploadsController#index as HTML
+  Rendering csv_uploads/index.html.erb within layouts/application
+  [1m[36mCsvUpload Load (0.4ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads" ORDER BY "csv_uploads"."created_at" DESC[0m
+  ↳ app/views/csv_uploads/index.html.erb:1
+  [1m[36mRecord Load (0.2ms)[0m  [1m[34mSELECT "records".* FROM "records" WHERE "records"."csv_upload_id" = $1[0m  [["csv_upload_id", 12]]
+  ↳ app/views/csv_uploads/index.html.erb:13
+  [1m[36mImportError Load (0.2ms)[0m  [1m[34mSELECT "import_errors".* FROM "import_errors" WHERE "import_errors"."csv_upload_id" = $1[0m  [["csv_upload_id", 12]]
+  ↳ app/views/csv_uploads/index.html.erb:23
+  Rendered csv_uploads/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 50ms (Views: 46.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/csv_uploads" for 127.0.0.1 at 2019-09-16 11:49:27 -0500
+Processing by CsvUploadsController#index as HTML
+  Rendering csv_uploads/index.html.erb within layouts/application
+  [1m[36mCsvUpload Load (0.4ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads" ORDER BY "csv_uploads"."created_at" DESC[0m
+  ↳ app/views/csv_uploads/index.html.erb:1
+  [1m[36mRecord Load (0.2ms)[0m  [1m[34mSELECT "records".* FROM "records" WHERE "records"."csv_upload_id" = $1[0m  [["csv_upload_id", 12]]
+  ↳ app/views/csv_uploads/index.html.erb:13
+  [1m[36mImportError Load (0.2ms)[0m  [1m[34mSELECT "import_errors".* FROM "import_errors" WHERE "import_errors"."csv_upload_id" = $1[0m  [["csv_upload_id", 12]]
+  ↳ app/views/csv_uploads/index.html.erb:23
+  Rendered csv_uploads/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 48ms (Views: 44.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/csv_uploads" for 127.0.0.1 at 2019-09-16 11:49:28 -0500
+Processing by CsvUploadsController#index as HTML
+  Rendering csv_uploads/index.html.erb within layouts/application
+  [1m[36mCsvUpload Load (0.4ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads" ORDER BY "csv_uploads"."created_at" DESC[0m
+  ↳ app/views/csv_uploads/index.html.erb:1
+  [1m[36mRecord Load (0.2ms)[0m  [1m[34mSELECT "records".* FROM "records" WHERE "records"."csv_upload_id" = $1[0m  [["csv_upload_id", 12]]
+  ↳ app/views/csv_uploads/index.html.erb:13
+  [1m[36mImportError Load (0.2ms)[0m  [1m[34mSELECT "import_errors".* FROM "import_errors" WHERE "import_errors"."csv_upload_id" = $1[0m  [["csv_upload_id", 12]]
+  ↳ app/views/csv_uploads/index.html.erb:23
+  Rendered csv_uploads/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 52ms (Views: 49.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/csv_uploads" for 127.0.0.1 at 2019-09-16 11:49:28 -0500
+Processing by CsvUploadsController#index as HTML
+  Rendering csv_uploads/index.html.erb within layouts/application
+  [1m[36mCsvUpload Load (0.5ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads" ORDER BY "csv_uploads"."created_at" DESC[0m
+  ↳ app/views/csv_uploads/index.html.erb:1
+  [1m[36mRecord Load (0.2ms)[0m  [1m[34mSELECT "records".* FROM "records" WHERE "records"."csv_upload_id" = $1[0m  [["csv_upload_id", 12]]
+  ↳ app/views/csv_uploads/index.html.erb:13
+  [1m[36mImportError Load (0.2ms)[0m  [1m[34mSELECT "import_errors".* FROM "import_errors" WHERE "import_errors"."csv_upload_id" = $1[0m  [["csv_upload_id", 12]]
+  ↳ app/views/csv_uploads/index.html.erb:23
+  Rendered csv_uploads/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 56ms (Views: 52.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/csv_uploads" for 127.0.0.1 at 2019-09-16 11:49:28 -0500
+Processing by CsvUploadsController#index as HTML
+  Rendering csv_uploads/index.html.erb within layouts/application
+  [1m[36mCsvUpload Load (0.5ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads" ORDER BY "csv_uploads"."created_at" DESC[0m
+  ↳ app/views/csv_uploads/index.html.erb:1
+  [1m[36mRecord Load (0.2ms)[0m  [1m[34mSELECT "records".* FROM "records" WHERE "records"."csv_upload_id" = $1[0m  [["csv_upload_id", 12]]
+  ↳ app/views/csv_uploads/index.html.erb:13
+  [1m[36mImportError Load (0.2ms)[0m  [1m[34mSELECT "import_errors".* FROM "import_errors" WHERE "import_errors"."csv_upload_id" = $1[0m  [["csv_upload_id", 12]]
+  ↳ app/views/csv_uploads/index.html.erb:23
+  Rendered csv_uploads/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 81ms (Views: 76.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/csv_uploads" for 127.0.0.1 at 2019-09-16 11:49:29 -0500
+Processing by CsvUploadsController#index as HTML
+  Rendering csv_uploads/index.html.erb within layouts/application
+  [1m[36mCsvUpload Load (0.5ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads" ORDER BY "csv_uploads"."created_at" DESC[0m
+  ↳ app/views/csv_uploads/index.html.erb:1
+  [1m[36mRecord Load (0.3ms)[0m  [1m[34mSELECT "records".* FROM "records" WHERE "records"."csv_upload_id" = $1[0m  [["csv_upload_id", 12]]
+  ↳ app/views/csv_uploads/index.html.erb:13
+  [1m[36mImportError Load (0.2ms)[0m  [1m[34mSELECT "import_errors".* FROM "import_errors" WHERE "import_errors"."csv_upload_id" = $1[0m  [["csv_upload_id", 12]]
+  ↳ app/views/csv_uploads/index.html.erb:23
+  Rendered csv_uploads/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 51ms (Views: 48.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/csv_uploads/new" for 127.0.0.1 at 2019-09-16 11:49:31 -0500
+Processing by CsvUploadsController#new as HTML
+  Rendering csv_uploads/new.html.erb within layouts/application
+  Rendered csv_uploads/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 64ms (Views: 60.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sidekiq/retries" for 127.0.0.1 at 2019-09-16 11:49:35 -0500
+Started GET "/sidekiq/busy" for 127.0.0.1 at 2019-09-16 11:49:38 -0500
+Started GET "/sidekiq/retries" for 127.0.0.1 at 2019-09-16 11:49:44 -0500
+Started GET "/sidekiq/busy" for 127.0.0.1 at 2019-09-16 11:49:45 -0500

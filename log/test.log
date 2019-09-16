@@ -860,3 +860,116 @@ Completed 302 Found in 13ms (ActiveRecord: 1.8ms)
   [1m[36mCsvUpload Destroy (0.2ms)[0m  [1m[31mDELETE FROM "csv_uploads" WHERE "csv_uploads"."id" = $1[0m  [["id", 18]]
   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
   [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCsvUpload Load (2.1ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCsvUpload Load (0.7ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Create (12.3ms)[0m  [1m[32mINSERT INTO "csv_uploads" ("identifier", "csv", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["identifier", "Identifier"], ["csv", "test_csv.csv"], ["created_at", "2019-09-16 16:46:54.738763"], ["updated_at", "2019-09-16 16:46:54.738763"]]
+  [1m[35m (2.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "records"[0m
+  [1m[36mCsvUpload Load (1.3ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.3ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mRecord Create (0.5ms)[0m  [1m[32mINSERT INTO "records" ("first", "last", "phone", "email", "csv_upload_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first", "Greg"], ["last", "Cesnik"], ["phone", "7654321718"], ["email", "greg.cesnik@gmail.com"], ["csv_upload_id", 19], ["created_at", "2019-09-16 16:46:54.834046"], ["updated_at", "2019-09-16 16:46:54.834046"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.2ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.2ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mImportError Create (1.1ms)[0m  [1m[32mINSERT INTO "import_errors" ("row_number", "error_message", "csv_upload_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["row_number", 2], ["error_message", "First can only be letters"], ["csv_upload_id", 19], ["created_at", "2019-09-16 16:46:54.856192"], ["updated_at", "2019-09-16 16:46:54.856192"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.2ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.2ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mImportError Create (0.3ms)[0m  [1m[32mINSERT INTO "import_errors" ("row_number", "error_message", "csv_upload_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["row_number", 3], ["error_message", "Last can't be present without a first name"], ["csv_upload_id", 19], ["created_at", "2019-09-16 16:46:54.861441"], ["updated_at", "2019-09-16 16:46:54.861441"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.1ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.2ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mImportError Create (0.3ms)[0m  [1m[32mINSERT INTO "import_errors" ("row_number", "error_message", "csv_upload_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["row_number", 4], ["error_message", "Phone number must be valid"], ["csv_upload_id", 19], ["created_at", "2019-09-16 16:46:54.868683"], ["updated_at", "2019-09-16 16:46:54.868683"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.1ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mRecord Create (0.3ms)[0m  [1m[32mINSERT INTO "records" ("first", "last", "phone", "email", "csv_upload_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first", "Greg"], ["last", "Cesnik"], ["phone", "1234568888"], ["email", "greg.cesnik@gmail.com"], ["csv_upload_id", 19], ["created_at", "2019-09-16 16:46:54.872257"], ["updated_at", "2019-09-16 16:46:54.872257"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.2ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mRecord Create (0.4ms)[0m  [1m[32mINSERT INTO "records" ("first", "last", "phone", "email", "csv_upload_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first", "Greg"], ["last", "Cesnik"], ["phone", "8764445523"], ["email", "greg.cesnik@gmail.com"], ["csv_upload_id", 19], ["created_at", "2019-09-16 16:46:54.875549"], ["updated_at", "2019-09-16 16:46:54.875549"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "records"[0m
+  [1m[36mCsvUpload Load (0.9ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT "records".* FROM "records" WHERE "records"."csv_upload_id" = $1[0m  [["csv_upload_id", 19]]
+  [1m[36mRecord Destroy (0.8ms)[0m  [1m[31mDELETE FROM "records" WHERE "records"."id" = $1[0m  [["id", 13]]
+  [1m[36mRecord Destroy (0.5ms)[0m  [1m[31mDELETE FROM "records" WHERE "records"."id" = $1[0m  [["id", 14]]
+  [1m[36mRecord Destroy (0.3ms)[0m  [1m[31mDELETE FROM "records" WHERE "records"."id" = $1[0m  [["id", 15]]
+  [1m[36mImportError Load (0.4ms)[0m  [1m[34mSELECT "import_errors".* FROM "import_errors" WHERE "import_errors"."csv_upload_id" = $1[0m  [["csv_upload_id", 19]]
+  [1m[36mImportError Destroy (0.3ms)[0m  [1m[31mDELETE FROM "import_errors" WHERE "import_errors"."id" = $1[0m  [["id", 13]]
+  [1m[36mImportError Destroy (0.2ms)[0m  [1m[31mDELETE FROM "import_errors" WHERE "import_errors"."id" = $1[0m  [["id", 14]]
+  [1m[36mImportError Destroy (0.2ms)[0m  [1m[31mDELETE FROM "import_errors" WHERE "import_errors"."id" = $1[0m  [["id", 15]]
+  [1m[36mCsvUpload Destroy (0.4ms)[0m  [1m[31mDELETE FROM "csv_uploads" WHERE "csv_uploads"."id" = $1[0m  [["id", 19]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Create (0.5ms)[0m  [1m[32mINSERT INTO "csv_uploads" ("identifier", "csv", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["identifier", "Identifier"], ["csv", "test_csv.csv"], ["created_at", "2019-09-16 16:46:54.903500"], ["updated_at", "2019-09-16 16:46:54.903500"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "import_errors"[0m
+  [1m[36mCsvUpload Load (0.2ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.3ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mRecord Create (0.8ms)[0m  [1m[32mINSERT INTO "records" ("first", "last", "phone", "email", "csv_upload_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first", "Greg"], ["last", "Cesnik"], ["phone", "7654321718"], ["email", "greg.cesnik@gmail.com"], ["csv_upload_id", 20], ["created_at", "2019-09-16 16:46:54.912053"], ["updated_at", "2019-09-16 16:46:54.912053"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.3ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.3ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mImportError Create (0.4ms)[0m  [1m[32mINSERT INTO "import_errors" ("row_number", "error_message", "csv_upload_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["row_number", 2], ["error_message", "First can only be letters"], ["csv_upload_id", 20], ["created_at", "2019-09-16 16:46:54.922498"], ["updated_at", "2019-09-16 16:46:54.922498"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.2ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.3ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mImportError Create (1.1ms)[0m  [1m[32mINSERT INTO "import_errors" ("row_number", "error_message", "csv_upload_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["row_number", 3], ["error_message", "Last can't be present without a first name"], ["csv_upload_id", 20], ["created_at", "2019-09-16 16:46:54.928302"], ["updated_at", "2019-09-16 16:46:54.928302"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.3ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.2ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mImportError Create (0.8ms)[0m  [1m[32mINSERT INTO "import_errors" ("row_number", "error_message", "csv_upload_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["row_number", 4], ["error_message", "Phone number must be valid"], ["csv_upload_id", 20], ["created_at", "2019-09-16 16:46:54.940253"], ["updated_at", "2019-09-16 16:46:54.940253"]]
+  [1m[35m (0.9ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.9ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mRecord Create (1.7ms)[0m  [1m[32mINSERT INTO "records" ("first", "last", "phone", "email", "csv_upload_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first", "Greg"], ["last", "Cesnik"], ["phone", "1234568888"], ["email", "greg.cesnik@gmail.com"], ["csv_upload_id", 20], ["created_at", "2019-09-16 16:46:54.955485"], ["updated_at", "2019-09-16 16:46:54.955485"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.2ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mRecord Create (0.4ms)[0m  [1m[32mINSERT INTO "records" ("first", "last", "phone", "email", "csv_upload_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first", "Greg"], ["last", "Cesnik"], ["phone", "8764445523"], ["email", "greg.cesnik@gmail.com"], ["csv_upload_id", 20], ["created_at", "2019-09-16 16:46:54.963387"], ["updated_at", "2019-09-16 16:46:54.963387"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "import_errors"[0m
+  [1m[36mCsvUpload Load (0.2ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRecord Load (0.2ms)[0m  [1m[34mSELECT "records".* FROM "records" WHERE "records"."csv_upload_id" = $1[0m  [["csv_upload_id", 20]]
+  [1m[36mRecord Destroy (0.2ms)[0m  [1m[31mDELETE FROM "records" WHERE "records"."id" = $1[0m  [["id", 16]]
+  [1m[36mRecord Destroy (0.2ms)[0m  [1m[31mDELETE FROM "records" WHERE "records"."id" = $1[0m  [["id", 17]]
+  [1m[36mRecord Destroy (0.2ms)[0m  [1m[31mDELETE FROM "records" WHERE "records"."id" = $1[0m  [["id", 18]]
+  [1m[36mImportError Load (0.2ms)[0m  [1m[34mSELECT "import_errors".* FROM "import_errors" WHERE "import_errors"."csv_upload_id" = $1[0m  [["csv_upload_id", 20]]
+  [1m[36mImportError Destroy (0.4ms)[0m  [1m[31mDELETE FROM "import_errors" WHERE "import_errors"."id" = $1[0m  [["id", 16]]
+  [1m[36mImportError Destroy (0.2ms)[0m  [1m[31mDELETE FROM "import_errors" WHERE "import_errors"."id" = $1[0m  [["id", 17]]
+  [1m[36mImportError Destroy (0.2ms)[0m  [1m[31mDELETE FROM "import_errors" WHERE "import_errors"."id" = $1[0m  [["id", 18]]
+  [1m[36mCsvUpload Destroy (0.2ms)[0m  [1m[31mDELETE FROM "csv_uploads" WHERE "csv_uploads"."id" = $1[0m  [["id", 20]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
