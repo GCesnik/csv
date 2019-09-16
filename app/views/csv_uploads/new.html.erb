@@ -1,0 +1,8 @@
+<div class="form-container">
+  <%= simple_form_for @csv_upload do |f| %>
+    <%= f.error_notification %>
+    <%= f.input :identifier, label: false, placeholder: 'Identifier' %>
+    <%= f.input :csv, label: false %>
+    <%= f.button :submit, class: "btn-primary" %>
+  <% end %>
+</div>

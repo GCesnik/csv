@@ -1,0 +1,43 @@
+<% @csv_uploads.each do |csv_upload| %>
+  <h1><%= csv_upload.identifier %></h1>
+  <table class="table highlight">
+    <thead>
+      <tr>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% csv_upload.records.each do |record| %>
+        <tr>
+          <td><%= record.first %></td>
+          <td><%= record.last %></td>
+          <td><%= number_to_phone(record.phone) %></td>
+          <td><%= record.email %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <% unless csv_upload.import_errors.blank? %>
+    <table class="table highlight">
+      <thead>
+        <tr>
+          <th scope="col">Row Number</th>
+          <th scope="col">Error</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% csv_upload.import_errors.each do |import_error| %>
+          <tr>
+            <td><%= import_error.row_number %></td>
+            <td><%= import_error.error_message %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% end %>
+<% end %>
+<%= link_to('New Upload', new_csv_upload_path) %> | 
+<%= link_to('Wipe DB', delete_all_csv_uploads_path) %>

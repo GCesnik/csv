@@ -1,0 +1,16 @@
+// Place all the styles related to the CsvUploads controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap";
+
+.container{
+  text-align: center;
+}
+
+.form-container{
+  text-align: center;
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10%;
+}
