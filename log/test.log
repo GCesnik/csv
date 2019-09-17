@@ -973,3 +973,847 @@ Completed 302 Found in 13ms (ActiveRecord: 1.8ms)
   [1m[36mCsvUpload Destroy (0.2ms)[0m  [1m[31mDELETE FROM "csv_uploads" WHERE "csv_uploads"."id" = $1[0m  [["id", 20]]
   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
   [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Create (0.9ms)[0m  [1m[32mINSERT INTO "csv_uploads" ("identifier", "csv", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["identifier", "Identifier"], ["csv", "test_csv.csv"], ["created_at", "2019-09-17 18:53:48.817217"], ["updated_at", "2019-09-17 18:53:48.817217"]]
+  [1m[36mCsvUpload Load (0.4ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[35m (8.5ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.6ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#index as HTML
+  Rendering csv_uploads/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/index.html.erb within layouts/application (0.6ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 25ms (Views: 20.3ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (0.8ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#new as HTML
+  Rendering csv_uploads/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/new.html.erb within layouts/application (0.4ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 8ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (0.5ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#new as HTML
+  Rendering csv_uploads/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/new.html.erb within layouts/application (0.4ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (0.8ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "csv_uploads"[0m
+Processing by CsvUploadsController#create as HTML
+  Parameters: {"csv_upload"=>{"id"=>"", "identifier"=>"Identifier", "csv"=>#<ActionDispatch::Http::UploadedFile:0x00007f99348bb8c8 @tempfile=#<Tempfile:/var/folders/q5/gpbpndhn2434n32bs41_tctw0000gn/T/RackMultipart20190917-17823-1smns9r.csv>, @original_filename="test_csv.csv", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"csv_upload[csv]\"; filename=\"test_csv.csv\"\r\nContent-Type: text/plain\r\nContent-Length: 293\r\n">, "created_at"=>"", "updated_at"=>""}}
+Unpermitted parameters: :id, :created_at, :updated_at
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Create (0.4ms)[0m  [1m[32mINSERT INTO "csv_uploads" ("identifier", "csv", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["identifier", "Identifier"], ["csv", "test_csv.csv"], ["created_at", "2019-09-17 18:53:49.828427"], ["updated_at", "2019-09-17 18:53:49.828427"]]
+  [1m[36mCsvUpload Load (0.3ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 500 Internal Server Error in 539ms (ActiveRecord: 1.3ms)
+  [1m[36mCsvUpload Load (0.4ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Create (0.8ms)[0m  [1m[32mINSERT INTO "csv_uploads" ("identifier", "csv", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["identifier", "Identifier"], ["csv", "test_csv.csv"], ["created_at", "2019-09-17 18:55:52.943703"], ["updated_at", "2019-09-17 18:55:52.943703"]]
+  [1m[36mCsvUpload Load (0.4ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.3ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#index as HTML
+  Rendering csv_uploads/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/index.html.erb within layouts/application (0.4ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 13ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (1.0ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#new as HTML
+  Rendering csv_uploads/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/new.html.erb within layouts/application (0.4ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 5ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (0.7ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#new as HTML
+  Rendering csv_uploads/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/new.html.erb within layouts/application (1.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (0.5ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "csv_uploads"[0m
+Processing by CsvUploadsController#create as HTML
+  Parameters: {"csv_upload"=>{"id"=>"", "identifier"=>"Identifier", "csv"=>#<ActionDispatch::Http::UploadedFile:0x00007f8d5b618650 @tempfile=#<Tempfile:/var/folders/q5/gpbpndhn2434n32bs41_tctw0000gn/T/RackMultipart20190917-18252-1d623h0.csv>, @original_filename="test_csv.csv", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"csv_upload[csv]\"; filename=\"test_csv.csv\"\r\nContent-Type: text/plain\r\nContent-Length: 293\r\n">, "created_at"=>"", "updated_at"=>""}}
+Unpermitted parameters: :id, :created_at, :updated_at
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Create (2.4ms)[0m  [1m[32mINSERT INTO "csv_uploads" ("identifier", "csv", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["identifier", "Identifier"], ["csv", "test_csv.csv"], ["created_at", "2019-09-17 18:55:53.073545"], ["updated_at", "2019-09-17 18:55:53.073545"]]
+  [1m[36mCsvUpload Load (1.4ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 4.7ms)
+  [1m[36mCsvUpload Load (4.9ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Create (0.9ms)[0m  [1m[32mINSERT INTO "csv_uploads" ("identifier", "csv", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["identifier", "Identifier"], ["csv", "test_csv.csv"], ["created_at", "2019-09-17 18:59:43.199862"], ["updated_at", "2019-09-17 18:59:43.199862"]]
+  [1m[36mCsvUpload Load (0.4ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.2ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#index as HTML
+  Rendering csv_uploads/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (0.7ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#new as HTML
+  Rendering csv_uploads/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/new.html.erb within layouts/application (1.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 8ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (0.8ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#new as HTML
+  Rendering csv_uploads/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/new.html.erb within layouts/application (0.5ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (1.1ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "csv_uploads"[0m
+Processing by CsvUploadsController#create as HTML
+  Parameters: {"csv_upload"=>{"id"=>"", "identifier"=>"Identifier", "csv"=>#<ActionDispatch::Http::UploadedFile:0x00007fb23c5f14a0 @tempfile=#<Tempfile:/var/folders/q5/gpbpndhn2434n32bs41_tctw0000gn/T/RackMultipart20190917-19071-9yz945.csv>, @original_filename="test_csv.csv", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"csv_upload[csv]\"; filename=\"test_csv.csv\"\r\nContent-Type: text/plain\r\nContent-Length: 293\r\n">, "created_at"=>"", "updated_at"=>""}}
+Unpermitted parameters: :id, :created_at, :updated_at
+  [1m[35m (0.7ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Create (0.9ms)[0m  [1m[32mINSERT INTO "csv_uploads" ("identifier", "csv", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["identifier", "Identifier"], ["csv", "test_csv.csv"], ["created_at", "2019-09-17 18:59:43.307160"], ["updated_at", "2019-09-17 18:59:43.307160"]]
+  [1m[36mCsvUpload Load (1.5ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 3.5ms)
+  [1m[36mCsvUpload Load (0.6ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Create (1.4ms)[0m  [1m[32mINSERT INTO "csv_uploads" ("identifier", "csv", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["identifier", "Identifier"], ["csv", "test_csv.csv"], ["created_at", "2019-09-17 19:01:50.095959"], ["updated_at", "2019-09-17 19:01:50.095959"]]
+  [1m[36mCsvUpload Load (0.4ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.3ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#index as HTML
+  Rendering csv_uploads/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (0.5ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#new as HTML
+  Rendering csv_uploads/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/new.html.erb within layouts/application (0.5ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (1.2ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#new as HTML
+  Rendering csv_uploads/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/new.html.erb within layouts/application (0.5ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (0.6ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (1.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "csv_uploads"[0m
+Processing by CsvUploadsController#create as HTML
+  Parameters: {"csv_upload"=>{"id"=>"", "identifier"=>"Identifier", "csv"=>#<ActionDispatch::Http::UploadedFile:0x00007f8a3f966ba0 @tempfile=#<Tempfile:/var/folders/q5/gpbpndhn2434n32bs41_tctw0000gn/T/RackMultipart20190917-19507-sv65l8.csv>, @original_filename="test_csv.csv", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"csv_upload[csv]\"; filename=\"test_csv.csv\"\r\nContent-Type: text/plain\r\nContent-Length: 293\r\n">, "created_at"=>"", "updated_at"=>""}}
+Unpermitted parameters: :id, :created_at, :updated_at
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Create (0.7ms)[0m  [1m[32mINSERT INTO "csv_uploads" ("identifier", "csv", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["identifier", "Identifier"], ["csv", "test_csv.csv"], ["created_at", "2019-09-17 19:01:50.215156"], ["updated_at", "2019-09-17 19:01:50.215156"]]
+  [1m[36mCsvUpload Load (0.8ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 2.2ms)
+  [1m[36mCsvUpload Load (0.5ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Create (0.9ms)[0m  [1m[32mINSERT INTO "csv_uploads" ("identifier", "csv", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["identifier", "Identifier"], ["csv", "test_csv.csv"], ["created_at", "2019-09-17 19:03:01.245778"], ["updated_at", "2019-09-17 19:03:01.245778"]]
+  [1m[36mCsvUpload Load (0.4ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.2ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#index as HTML
+  Rendering csv_uploads/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/index.html.erb within layouts/application (0.5ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (0.8ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#new as HTML
+  Rendering csv_uploads/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/new.html.erb within layouts/application (0.4ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (0.5ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#new as HTML
+  Rendering csv_uploads/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/new.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (0.6ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "csv_uploads"[0m
+Processing by CsvUploadsController#create as HTML
+  Parameters: {"csv_upload"=>{"id"=>"", "identifier"=>"Identifier", "csv"=>#<ActionDispatch::Http::UploadedFile:0x00007f8f95ee5e90 @tempfile=#<Tempfile:/var/folders/q5/gpbpndhn2434n32bs41_tctw0000gn/T/RackMultipart20190917-19745-e3st4i.csv>, @original_filename="test_csv.csv", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"csv_upload[csv]\"; filename=\"test_csv.csv\"\r\nContent-Type: text/plain\r\nContent-Length: 293\r\n">, "created_at"=>"", "updated_at"=>""}}
+Unpermitted parameters: :id, :created_at, :updated_at
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Create (0.9ms)[0m  [1m[32mINSERT INTO "csv_uploads" ("identifier", "csv", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["identifier", "Identifier"], ["csv", "test_csv.csv"], ["created_at", "2019-09-17 19:03:01.334401"], ["updated_at", "2019-09-17 19:03:01.334401"]]
+  [1m[36mCsvUpload Load (0.9ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 2.4ms)
+  [1m[36mCsvUpload Load (0.8ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Create (2.1ms)[0m  [1m[32mINSERT INTO "csv_uploads" ("identifier", "csv", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["identifier", "Identifier"], ["csv", "test_csv.csv"], ["created_at", "2019-09-17 19:04:10.306584"], ["updated_at", "2019-09-17 19:04:10.306584"]]
+  [1m[36mCsvUpload Load (0.4ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.3ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#index as HTML
+  Rendering csv_uploads/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/index.html.erb within layouts/application (0.9ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 17ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (0.8ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#new as HTML
+  Rendering csv_uploads/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/new.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 7ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (0.7ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#new as HTML
+  Rendering csv_uploads/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/new.html.erb within layouts/application (0.4ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (0.4ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "csv_uploads"[0m
+Processing by CsvUploadsController#create as HTML
+  Parameters: {"csv_upload"=>{"id"=>"", "identifier"=>"Identifier", "csv"=>#<ActionDispatch::Http::UploadedFile:0x00007f941ac1b208 @tempfile=#<Tempfile:/var/folders/q5/gpbpndhn2434n32bs41_tctw0000gn/T/RackMultipart20190917-20026-3qaz6s.csv>, @original_filename="test_csv.csv", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"csv_upload[csv]\"; filename=\"test_csv.csv\"\r\nContent-Type: text/plain\r\nContent-Length: 293\r\n">, "created_at"=>"", "updated_at"=>""}}
+Unpermitted parameters: :id, :created_at, :updated_at
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Create (1.5ms)[0m  [1m[32mINSERT INTO "csv_uploads" ("identifier", "csv", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["identifier", "Identifier"], ["csv", "test_csv.csv"], ["created_at", "2019-09-17 19:04:10.445733"], ["updated_at", "2019-09-17 19:04:10.445733"]]
+  [1m[36mCsvUpload Load (0.9ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 3.8ms)
+  [1m[36mCsvUpload Load (0.9ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Create (0.8ms)[0m  [1m[32mINSERT INTO "csv_uploads" ("identifier", "csv", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["identifier", "Identifier"], ["csv", "test_csv.csv"], ["created_at", "2019-09-17 19:05:19.699323"], ["updated_at", "2019-09-17 19:05:19.699323"]]
+  [1m[36mCsvUpload Load (0.4ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.3ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#index as HTML
+  Rendering csv_uploads/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (0.5ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#new as HTML
+  Rendering csv_uploads/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/new.html.erb within layouts/application (0.5ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 5ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (0.6ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#new as HTML
+  Rendering csv_uploads/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/new.html.erb within layouts/application (0.4ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (0.6ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "csv_uploads"[0m
+Processing by CsvUploadsController#create as HTML
+  Parameters: {"csv_upload"=>{"id"=>"", "identifier"=>"Identifier", "csv"=>#<ActionDispatch::Http::UploadedFile:0x00007fce88ed9ca8 @tempfile=#<Tempfile:/var/folders/q5/gpbpndhn2434n32bs41_tctw0000gn/T/RackMultipart20190917-20298-1l5r4wl.csv>, @original_filename="test_csv.csv", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"csv_upload[csv]\"; filename=\"test_csv.csv\"\r\nContent-Type: text/plain\r\nContent-Length: 293\r\n">, "created_at"=>"", "updated_at"=>""}}
+Unpermitted parameters: :id, :created_at, :updated_at
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Create (1.7ms)[0m  [1m[32mINSERT INTO "csv_uploads" ("identifier", "csv", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["identifier", "Identifier"], ["csv", "test_csv.csv"], ["created_at", "2019-09-17 19:05:19.795143"], ["updated_at", "2019-09-17 19:05:19.795143"]]
+  [1m[36mCsvUpload Load (0.8ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 3.3ms)
+  [1m[36mCsvUpload Load (0.5ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Create (0.8ms)[0m  [1m[32mINSERT INTO "csv_uploads" ("identifier", "csv", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["identifier", "Identifier"], ["csv", "test_csv.csv"], ["created_at", "2019-09-17 19:05:50.259434"], ["updated_at", "2019-09-17 19:05:50.259434"]]
+  [1m[36mCsvUpload Load (0.4ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.3ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#index as HTML
+  Rendering csv_uploads/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 13ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (0.5ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#new as HTML
+  Rendering csv_uploads/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/new.html.erb within layouts/application (0.4ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 9ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (1.0ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#new as HTML
+  Rendering csv_uploads/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/new.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (0.5ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "csv_uploads"[0m
+Processing by CsvUploadsController#create as HTML
+  Parameters: {"csv_upload"=>{"id"=>"", "identifier"=>"Identifier", "csv"=>#<ActionDispatch::Http::UploadedFile:0x00007fe790c7f158 @tempfile=#<Tempfile:/var/folders/q5/gpbpndhn2434n32bs41_tctw0000gn/T/RackMultipart20190917-20417-18dybnb.csv>, @original_filename="test_csv.csv", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"csv_upload[csv]\"; filename=\"test_csv.csv\"\r\nContent-Type: text/plain\r\nContent-Length: 293\r\n">, "created_at"=>"", "updated_at"=>""}}
+Unpermitted parameters: :id, :created_at, :updated_at
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Create (0.8ms)[0m  [1m[32mINSERT INTO "csv_uploads" ("identifier", "csv", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["identifier", "Identifier"], ["csv", "test_csv.csv"], ["created_at", "2019-09-17 19:05:50.392150"], ["updated_at", "2019-09-17 19:05:50.392150"]]
+  [1m[36mCsvUpload Load (1.3ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 3.0ms)
+  [1m[36mCsvUpload Load (1.0ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (1.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Create (1.0ms)[0m  [1m[32mINSERT INTO "csv_uploads" ("identifier", "csv", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["identifier", "Identifier"], ["csv", "test_csv.csv"], ["created_at", "2019-09-17 19:06:29.326336"], ["updated_at", "2019-09-17 19:06:29.326336"]]
+  [1m[36mCsvUpload Load (0.8ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.6ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#index as HTML
+  Rendering csv_uploads/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/index.html.erb within layouts/application (0.4ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 16ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (0.7ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#new as HTML
+  Rendering csv_uploads/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/new.html.erb within layouts/application (1.1ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 8ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (0.9ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#new as HTML
+  Rendering csv_uploads/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/new.html.erb within layouts/application (0.4ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (2.2ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "csv_uploads"[0m
+Processing by CsvUploadsController#create as HTML
+  Parameters: {"csv_upload"=>{"id"=>"", "identifier"=>"Identifier", "csv"=>#<ActionDispatch::Http::UploadedFile:0x00007fd1865fb680 @tempfile=#<Tempfile:/var/folders/q5/gpbpndhn2434n32bs41_tctw0000gn/T/RackMultipart20190917-20561-18r7suw.csv>, @original_filename="test_csv.csv", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"csv_upload[csv]\"; filename=\"test_csv.csv\"\r\nContent-Type: text/plain\r\nContent-Length: 293\r\n">, "created_at"=>"", "updated_at"=>""}}
+Unpermitted parameters: :id, :created_at, :updated_at
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Create (0.7ms)[0m  [1m[32mINSERT INTO "csv_uploads" ("identifier", "csv", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["identifier", "Identifier"], ["csv", "test_csv.csv"], ["created_at", "2019-09-17 19:06:29.460720"], ["updated_at", "2019-09-17 19:06:29.460720"]]
+  [1m[36mCsvUpload Load (0.6ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 2.1ms)
+  [1m[36mCsvUpload Load (1.7ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Create (0.9ms)[0m  [1m[32mINSERT INTO "csv_uploads" ("identifier", "csv", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["identifier", "Identifier"], ["csv", "test_csv.csv"], ["created_at", "2019-09-17 19:06:54.604333"], ["updated_at", "2019-09-17 19:06:54.604333"]]
+  [1m[36mCsvUpload Load (0.5ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.3ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#index as HTML
+  Rendering csv_uploads/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 13ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (0.7ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#new as HTML
+  Rendering csv_uploads/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/new.html.erb within layouts/application (0.4ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 6ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (0.4ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#new as HTML
+  Rendering csv_uploads/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/new.html.erb within layouts/application (0.7ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (0.8ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "csv_uploads"[0m
+Processing by CsvUploadsController#create as HTML
+  Parameters: {"csv_upload"=>{"id"=>"", "identifier"=>"Identifier", "csv"=>#<ActionDispatch::Http::UploadedFile:0x00007fb18f485808 @tempfile=#<Tempfile:/var/folders/q5/gpbpndhn2434n32bs41_tctw0000gn/T/RackMultipart20190917-20654-1wwyqnl.csv>, @original_filename="test_csv.csv", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"csv_upload[csv]\"; filename=\"test_csv.csv\"\r\nContent-Type: text/plain\r\nContent-Length: 293\r\n">, "created_at"=>"", "updated_at"=>""}}
+Unpermitted parameters: :id, :created_at, :updated_at
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Create (0.6ms)[0m  [1m[32mINSERT INTO "csv_uploads" ("identifier", "csv", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["identifier", "Identifier"], ["csv", "test_csv.csv"], ["created_at", "2019-09-17 19:06:54.720740"], ["updated_at", "2019-09-17 19:06:54.720740"]]
+  [1m[36mCsvUpload Load (0.8ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 2.9ms)
+  [1m[36mCsvUpload Load (0.9ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Create (0.7ms)[0m  [1m[32mINSERT INTO "csv_uploads" ("identifier", "csv", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["identifier", "Identifier"], ["csv", "test_csv.csv"], ["created_at", "2019-09-17 19:07:18.003239"], ["updated_at", "2019-09-17 19:07:18.003239"]]
+  [1m[36mCsvUpload Load (0.6ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#index as HTML
+  Rendering csv_uploads/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/index.html.erb within layouts/application (0.4ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 15ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#new as HTML
+  Rendering csv_uploads/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/new.html.erb within layouts/application (1.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 8ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (1.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#new as HTML
+  Rendering csv_uploads/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/new.html.erb within layouts/application (0.6ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (1.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "csv_uploads"[0m
+Processing by CsvUploadsController#create as HTML
+  Parameters: {"csv_upload"=>{"id"=>"", "identifier"=>"Identifier", "csv"=>#<ActionDispatch::Http::UploadedFile:0x00007fa320df8160 @tempfile=#<Tempfile:/var/folders/q5/gpbpndhn2434n32bs41_tctw0000gn/T/RackMultipart20190917-20743-u92m80.csv>, @original_filename="test_csv.csv", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"csv_upload[csv]\"; filename=\"test_csv.csv\"\r\nContent-Type: text/plain\r\nContent-Length: 293\r\n">, "created_at"=>"", "updated_at"=>""}}
+Unpermitted parameters: :id, :created_at, :updated_at
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Create (0.8ms)[0m  [1m[32mINSERT INTO "csv_uploads" ("identifier", "csv", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["identifier", "Identifier"], ["csv", "test_csv.csv"], ["created_at", "2019-09-17 19:07:18.134643"], ["updated_at", "2019-09-17 19:07:18.134643"]]
+  [1m[36mCsvUpload Load (1.0ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 2.7ms)
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Create (1.0ms)[0m  [1m[32mINSERT INTO "csv_uploads" ("identifier", "csv", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["identifier", "Identifier"], ["csv", "test_csv.csv"], ["created_at", "2019-09-17 19:08:44.578838"], ["updated_at", "2019-09-17 19:08:44.578838"]]
+  [1m[36mCsvUpload Load (0.4ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.4ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#index as HTML
+  Rendering csv_uploads/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/index.html.erb within layouts/application (0.4ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 15ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (0.6ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#new as HTML
+  Rendering csv_uploads/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/new.html.erb within layouts/application (0.5ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 9ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (1.2ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (1.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#new as HTML
+  Rendering csv_uploads/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/new.html.erb within layouts/application (1.4ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (1.6ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "csv_uploads"[0m
+Processing by CsvUploadsController#create as HTML
+  Parameters: {"csv_upload"=>{"id"=>"", "identifier"=>"Identifier", "csv"=>#<ActionDispatch::Http::UploadedFile:0x00007fb2173be478 @tempfile=#<Tempfile:/var/folders/q5/gpbpndhn2434n32bs41_tctw0000gn/T/RackMultipart20190917-21042-sxywx9.csv>, @original_filename="test_csv.csv", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"csv_upload[csv]\"; filename=\"test_csv.csv\"\r\nContent-Type: text/plain\r\nContent-Length: 293\r\n">, "created_at"=>"", "updated_at"=>""}}
+Unpermitted parameters: :id, :created_at, :updated_at
+  [1m[35m (1.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Create (2.8ms)[0m  [1m[32mINSERT INTO "csv_uploads" ("identifier", "csv", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["identifier", "Identifier"], ["csv", "test_csv.csv"], ["created_at", "2019-09-17 19:08:44.760773"], ["updated_at", "2019-09-17 19:08:44.760773"]]
+  [1m[36mCsvUpload Load (1.1ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 5.9ms)
+  [1m[36mCsvUpload Load (0.7ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "csv_uploads"[0m
+Processing by CsvUploadsController#create as HTML
+  Parameters: {"csv_upload"=>{"id"=>"", "identifier"=>"Identifier", "csv"=>#<ActionDispatch::Http::UploadedFile:0x00007f944be09db8 @tempfile=#<Tempfile:/var/folders/q5/gpbpndhn2434n32bs41_tctw0000gn/T/RackMultipart20190917-21155-1dw28mf.csv>, @original_filename="test_csv.csv", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"csv_upload[csv]\"; filename=\"test_csv.csv\"\r\nContent-Type: text/plain\r\nContent-Length: 293\r\n">, "created_at"=>"", "updated_at"=>""}}
+Unpermitted parameters: :id, :created_at, :updated_at
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Create (1.1ms)[0m  [1m[32mINSERT INTO "csv_uploads" ("identifier", "csv", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["identifier", "Identifier"], ["csv", "test_csv.csv"], ["created_at", "2019-09-17 19:09:24.125831"], ["updated_at", "2019-09-17 19:09:24.125831"]]
+  [1m[36mCsvUpload Load (0.5ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 500 Internal Server Error in 32003ms (ActiveRecord: 3.1ms)
+  [1m[36mCsvUpload Load (0.4ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Create (0.8ms)[0m  [1m[32mINSERT INTO "csv_uploads" ("identifier", "csv", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["identifier", "Identifier"], ["csv", "test_csv.csv"], ["created_at", "2019-09-17 19:22:44.803497"], ["updated_at", "2019-09-17 19:22:44.803497"]]
+  [1m[36mCsvUpload Load (0.4ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.3ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#index as HTML
+  Rendering csv_uploads/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/index.html.erb within layouts/application (0.4ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (0.5ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#new as HTML
+  Rendering csv_uploads/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/new.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (1.4ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#new as HTML
+  Rendering csv_uploads/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/new.html.erb within layouts/application (0.5ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (1.3ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "csv_uploads"[0m
+Processing by CsvUploadsController#create as HTML
+  Parameters: {"csv_upload"=>{"id"=>"", "identifier"=>"Identifier", "csv"=>#<ActionDispatch::Http::UploadedFile:0x00007fb6de4c2330 @tempfile=#<Tempfile:/var/folders/q5/gpbpndhn2434n32bs41_tctw0000gn/T/RackMultipart20190917-21739-ti373x.csv>, @original_filename="test_csv.csv", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"csv_upload[csv]\"; filename=\"test_csv.csv\"\r\nContent-Type: text/plain\r\nContent-Length: 293\r\n">, "created_at"=>"", "updated_at"=>""}}
+Unpermitted parameters: :id, :created_at, :updated_at
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Create (1.1ms)[0m  [1m[32mINSERT INTO "csv_uploads" ("identifier", "csv", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["identifier", "Identifier"], ["csv", "test_csv.csv"], ["created_at", "2019-09-17 19:22:49.922826"], ["updated_at", "2019-09-17 19:22:49.922826"]]
+  [1m[36mCsvUpload Load (0.6ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 500 Internal Server Error in 5017ms (ActiveRecord: 2.5ms)
+  [1m[36mCsvUpload Load (0.3ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Create (0.7ms)[0m  [1m[32mINSERT INTO "csv_uploads" ("identifier", "csv", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["identifier", "Identifier"], ["csv", "test_csv.csv"], ["created_at", "2019-09-17 19:24:36.077151"], ["updated_at", "2019-09-17 19:24:36.077151"]]
+  [1m[36mCsvUpload Load (0.4ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.3ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#index as HTML
+  Rendering csv_uploads/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/index.html.erb within layouts/application (1.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 18ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (0.5ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#new as HTML
+  Rendering csv_uploads/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/new.html.erb within layouts/application (1.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 8ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (0.9ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#new as HTML
+  Rendering csv_uploads/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/new.html.erb within layouts/application (0.6ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (0.7ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "csv_uploads"[0m
+Processing by CsvUploadsController#create as HTML
+  Parameters: {"csv_upload"=>{"id"=>"", "identifier"=>"Identifier", "csv"=>#<ActionDispatch::Http::UploadedFile:0x00007fdd06686970 @tempfile=#<Tempfile:/var/folders/q5/gpbpndhn2434n32bs41_tctw0000gn/T/RackMultipart20190917-22118-si606d.csv>, @original_filename="test_csv.csv", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"csv_upload[csv]\"; filename=\"test_csv.csv\"\r\nContent-Type: text/plain\r\nContent-Length: 293\r\n">, "created_at"=>"", "updated_at"=>""}}
+Unpermitted parameters: :id, :created_at, :updated_at
+  [1m[35m (0.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Create (0.7ms)[0m  [1m[32mINSERT INTO "csv_uploads" ("identifier", "csv", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["identifier", "Identifier"], ["csv", "test_csv.csv"], ["created_at", "2019-09-17 19:24:36.219984"], ["updated_at", "2019-09-17 19:24:36.219984"]]
+  [1m[36mCsvUpload Load (0.6ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 2.1ms)
+  [1m[36mCsvUpload Load (0.7ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCsvUpload Load (1.2ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCsvUpload Load (0.4ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Create (1.6ms)[0m  [1m[32mINSERT INTO "csv_uploads" ("identifier", "csv", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["identifier", "Identifier"], ["csv", "test_csv.csv"], ["created_at", "2019-09-17 19:29:14.780128"], ["updated_at", "2019-09-17 19:29:14.780128"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "records"[0m
+  [1m[36mCsvUpload Load (0.4ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.4ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  [1m[36mRecord Create (0.7ms)[0m  [1m[32mINSERT INTO "records" ("first", "last", "phone", "email", "csv_upload_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first", "Greg"], ["last", "Cesnik"], ["phone", "7654321718"], ["email", "greg.cesnik@gmail.com"], ["csv_upload_id", 50], ["created_at", "2019-09-17 19:29:14.852596"], ["updated_at", "2019-09-17 19:29:14.852596"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.7ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.3ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.5ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  [1m[36mImportError Create (1.0ms)[0m  [1m[32mINSERT INTO "import_errors" ("row_number", "error_message", "csv_upload_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["row_number", 2], ["error_message", "First can only be letters"], ["csv_upload_id", 50], ["created_at", "2019-09-17 19:29:14.906215"], ["updated_at", "2019-09-17 19:29:14.906215"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.2ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.3ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  [1m[36mImportError Create (0.6ms)[0m  [1m[32mINSERT INTO "import_errors" ("row_number", "error_message", "csv_upload_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["row_number", 3], ["error_message", "Last can't be present without a first name"], ["csv_upload_id", 50], ["created_at", "2019-09-17 19:29:14.911372"], ["updated_at", "2019-09-17 19:29:14.911372"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.2ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.3ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  [1m[36mImportError Create (0.5ms)[0m  [1m[32mINSERT INTO "import_errors" ("row_number", "error_message", "csv_upload_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["row_number", 4], ["error_message", "Phone number must be valid"], ["csv_upload_id", 50], ["created_at", "2019-09-17 19:29:14.922356"], ["updated_at", "2019-09-17 19:29:14.922356"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.2ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  [1m[36mRecord Create (0.7ms)[0m  [1m[32mINSERT INTO "records" ("first", "last", "phone", "email", "csv_upload_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first", "Greg"], ["last", "Cesnik"], ["phone", "1234568888"], ["email", "greg.cesnik@gmail.com"], ["csv_upload_id", 50], ["created_at", "2019-09-17 19:29:14.927939"], ["updated_at", "2019-09-17 19:29:14.927939"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.4ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  [1m[36mRecord Create (0.4ms)[0m  [1m[32mINSERT INTO "records" ("first", "last", "phone", "email", "csv_upload_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first", "Greg"], ["last", "Cesnik"], ["phone", "8764445523"], ["email", "greg.cesnik@gmail.com"], ["csv_upload_id", 50], ["created_at", "2019-09-17 19:29:14.937013"], ["updated_at", "2019-09-17 19:29:14.937013"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "records"[0m
+  [1m[36mCsvUpload Load (0.3ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRecord Load (0.7ms)[0m  [1m[34mSELECT "records".* FROM "records" WHERE "records"."csv_upload_id" = $1[0m  [["csv_upload_id", 50]]
+  [1m[36mRecord Destroy (0.5ms)[0m  [1m[31mDELETE FROM "records" WHERE "records"."id" = $1[0m  [["id", 19]]
+  [1m[36mRecord Destroy (0.4ms)[0m  [1m[31mDELETE FROM "records" WHERE "records"."id" = $1[0m  [["id", 20]]
+  [1m[36mRecord Destroy (0.5ms)[0m  [1m[31mDELETE FROM "records" WHERE "records"."id" = $1[0m  [["id", 21]]
+  [1m[36mImportError Load (0.5ms)[0m  [1m[34mSELECT "import_errors".* FROM "import_errors" WHERE "import_errors"."csv_upload_id" = $1[0m  [["csv_upload_id", 50]]
+  [1m[36mImportError Destroy (0.8ms)[0m  [1m[31mDELETE FROM "import_errors" WHERE "import_errors"."id" = $1[0m  [["id", 19]]
+  [1m[36mImportError Destroy (1.0ms)[0m  [1m[31mDELETE FROM "import_errors" WHERE "import_errors"."id" = $1[0m  [["id", 20]]
+  [1m[36mImportError Destroy (0.5ms)[0m  [1m[31mDELETE FROM "import_errors" WHERE "import_errors"."id" = $1[0m  [["id", 21]]
+  [1m[36mCsvUpload Destroy (0.4ms)[0m  [1m[31mDELETE FROM "csv_uploads" WHERE "csv_uploads"."id" = $1[0m  [["id", 50]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Create (0.4ms)[0m  [1m[32mINSERT INTO "csv_uploads" ("identifier", "csv", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["identifier", "Identifier"], ["csv", "test_csv.csv"], ["created_at", "2019-09-17 19:29:14.974446"], ["updated_at", "2019-09-17 19:29:14.974446"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "import_errors"[0m
+  [1m[36mCsvUpload Load (0.9ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (1.3ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[36mRecord Create (1.9ms)[0m  [1m[32mINSERT INTO "records" ("first", "last", "phone", "email", "csv_upload_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first", "Greg"], ["last", "Cesnik"], ["phone", "7654321718"], ["email", "greg.cesnik@gmail.com"], ["csv_upload_id", 51], ["created_at", "2019-09-17 19:29:14.994044"], ["updated_at", "2019-09-17 19:29:14.994044"]]
+  [1m[35m (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (1.3ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.3ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[36mImportError Create (0.6ms)[0m  [1m[32mINSERT INTO "import_errors" ("row_number", "error_message", "csv_upload_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["row_number", 2], ["error_message", "First can only be letters"], ["csv_upload_id", 51], ["created_at", "2019-09-17 19:29:15.015503"], ["updated_at", "2019-09-17 19:29:15.015503"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.2ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.4ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[36mImportError Create (0.5ms)[0m  [1m[32mINSERT INTO "import_errors" ("row_number", "error_message", "csv_upload_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["row_number", 3], ["error_message", "Last can't be present without a first name"], ["csv_upload_id", 51], ["created_at", "2019-09-17 19:29:15.022976"], ["updated_at", "2019-09-17 19:29:15.022976"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.3ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.2ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[36mImportError Create (0.4ms)[0m  [1m[32mINSERT INTO "import_errors" ("row_number", "error_message", "csv_upload_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["row_number", 4], ["error_message", "Phone number must be valid"], ["csv_upload_id", 51], ["created_at", "2019-09-17 19:29:15.031834"], ["updated_at", "2019-09-17 19:29:15.031834"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.2ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[36mRecord Create (0.6ms)[0m  [1m[32mINSERT INTO "records" ("first", "last", "phone", "email", "csv_upload_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first", "Greg"], ["last", "Cesnik"], ["phone", "1234568888"], ["email", "greg.cesnik@gmail.com"], ["csv_upload_id", 51], ["created_at", "2019-09-17 19:29:15.039510"], ["updated_at", "2019-09-17 19:29:15.039510"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Load (0.4ms)[0m  [1m[34mSELECT  "csv_uploads".* FROM "csv_uploads" WHERE "csv_uploads"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  [1m[36mRecord Create (0.8ms)[0m  [1m[32mINSERT INTO "records" ("first", "last", "phone", "email", "csv_upload_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first", "Greg"], ["last", "Cesnik"], ["phone", "8764445523"], ["email", "greg.cesnik@gmail.com"], ["csv_upload_id", 51], ["created_at", "2019-09-17 19:29:15.051022"], ["updated_at", "2019-09-17 19:29:15.051022"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "import_errors"[0m
+  [1m[36mCsvUpload Load (0.8ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRecord Load (0.5ms)[0m  [1m[34mSELECT "records".* FROM "records" WHERE "records"."csv_upload_id" = $1[0m  [["csv_upload_id", 51]]
+  [1m[36mRecord Destroy (0.6ms)[0m  [1m[31mDELETE FROM "records" WHERE "records"."id" = $1[0m  [["id", 22]]
+  [1m[36mRecord Destroy (0.7ms)[0m  [1m[31mDELETE FROM "records" WHERE "records"."id" = $1[0m  [["id", 23]]
+  [1m[36mRecord Destroy (0.8ms)[0m  [1m[31mDELETE FROM "records" WHERE "records"."id" = $1[0m  [["id", 24]]
+  [1m[36mImportError Load (0.9ms)[0m  [1m[34mSELECT "import_errors".* FROM "import_errors" WHERE "import_errors"."csv_upload_id" = $1[0m  [["csv_upload_id", 51]]
+  [1m[36mImportError Destroy (1.2ms)[0m  [1m[31mDELETE FROM "import_errors" WHERE "import_errors"."id" = $1[0m  [["id", 22]]
+  [1m[36mImportError Destroy (0.9ms)[0m  [1m[31mDELETE FROM "import_errors" WHERE "import_errors"."id" = $1[0m  [["id", 23]]
+  [1m[36mImportError Destroy (1.0ms)[0m  [1m[31mDELETE FROM "import_errors" WHERE "import_errors"."id" = $1[0m  [["id", 24]]
+  [1m[36mCsvUpload Destroy (0.8ms)[0m  [1m[31mDELETE FROM "csv_uploads" WHERE "csv_uploads"."id" = $1[0m  [["id", 51]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Create (1.0ms)[0m  [1m[32mINSERT INTO "csv_uploads" ("identifier", "csv", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["identifier", "Identifier"], ["csv", "test_csv.csv"], ["created_at", "2019-09-17 19:30:20.063019"], ["updated_at", "2019-09-17 19:30:20.063019"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by CsvUploadsController#index as HTML
+  Rendering csv_uploads/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 12ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (1.6ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads" ORDER BY "csv_uploads"."created_at" DESC[0m
+  [1m[36mCsvUpload Load (0.4ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRecord Load (0.4ms)[0m  [1m[34mSELECT "records".* FROM "records" WHERE "records"."csv_upload_id" = $1[0m  [["csv_upload_id", 52]]
+  [1m[36mImportError Load (0.4ms)[0m  [1m[34mSELECT "import_errors".* FROM "import_errors" WHERE "import_errors"."csv_upload_id" = $1[0m  [["csv_upload_id", 52]]
+  [1m[36mCsvUpload Destroy (0.2ms)[0m  [1m[31mDELETE FROM "csv_uploads" WHERE "csv_uploads"."id" = $1[0m  [["id", 52]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#index as HTML
+  Rendering csv_uploads/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/index.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (0.6ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#new as HTML
+  Rendering csv_uploads/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/new.html.erb within layouts/application (0.7ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 7ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (0.4ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by CsvUploadsController#new as HTML
+  Rendering csv_uploads/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered csv_uploads/new.html.erb within layouts/application (0.4ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+  [1m[36mCsvUpload Load (1.1ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "csv_uploads"[0m
+Processing by CsvUploadsController#create as HTML
+  Parameters: {"csv_upload"=>{"id"=>"", "identifier"=>"Identifier", "csv"=>#<ActionDispatch::Http::UploadedFile:0x00007ff462412bd0 @tempfile=#<Tempfile:/var/folders/q5/gpbpndhn2434n32bs41_tctw0000gn/T/RackMultipart20190917-23328-ttpbao.csv>, @original_filename="test_csv.csv", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"csv_upload[csv]\"; filename=\"test_csv.csv\"\r\nContent-Type: text/plain\r\nContent-Length: 293\r\n">, "created_at"=>"", "updated_at"=>""}}
+Unpermitted parameters: :id, :created_at, :updated_at
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCsvUpload Create (1.5ms)[0m  [1m[32mINSERT INTO "csv_uploads" ("identifier", "csv", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["identifier", "Identifier"], ["csv", "test_csv.csv"], ["created_at", "2019-09-17 19:30:20.204549"], ["updated_at", "2019-09-17 19:30:20.204549"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/csv_uploads
+Completed 302 Found in 21ms (ActiveRecord: 2.2ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "csv_uploads"[0m
+  [1m[36mCsvUpload Load (1.5ms)[0m  [1m[34mSELECT "csv_uploads".* FROM "csv_uploads"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRecord Load (1.2ms)[0m  [1m[34mSELECT "records".* FROM "records" WHERE "records"."csv_upload_id" = $1[0m  [["csv_upload_id", 53]]
+  [1m[36mImportError Load (0.8ms)[0m  [1m[34mSELECT "import_errors".* FROM "import_errors" WHERE "import_errors"."csv_upload_id" = $1[0m  [["csv_upload_id", 53]]
+  [1m[36mCsvUpload Destroy (1.1ms)[0m  [1m[31mDELETE FROM "csv_uploads" WHERE "csv_uploads"."id" = $1[0m  [["id", 53]]
+  [1m[35m (0.9ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m

@@ -10,6 +10,8 @@ class CsvUpload < ApplicationRecord
   has_many :import_errors, dependent: :destroy
 
   def start_import_worker
-    RecordsWorker.perform_async(self.id)
+    unless Rails.env.test?
+      RecordsWorker.perform_async(self.id)
+    end
   end
 end

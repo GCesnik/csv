@@ -1,13 +1,9 @@
 if Rails.env.test?
-
   CarrierWave.configure do |config|
     config.storage = :file
     config.enable_processing = false
   end
-
-  # make sure uploader is auto-loaded
   CsvUploader
-
   CarrierWave::Uploader::Base.descendants.each do |klass|
     next if klass.anonymous?
     klass.class_eval do
@@ -26,14 +22,15 @@ if Rails.env.test?
 else
   CarrierWave.configure do |config|
     config.fog_credentials = {
-        provider:              'AWS',
-        aws_access_key_id:     'AKIAJPHXIT4ZSDOEPJVQ',
-        aws_secret_access_key: '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',
-        region:                'us-east-1',
+        provider: 'AWS',
+        aws_access_key_id: Rails.application.credentials[:aws_access_key_id],
+        aws_secret_access_key: Rails.application.credentials[:aws_secret_access_key],
+        region: Rails.application.credentials[:region],
     }
-    config.fog_directory  = 'csv-springbig-uploads'                                      # required
-    config.fog_public     = true                                                 # optional, defaults to true
+    config.fog_directory = 'csv-springbig-uploads'
+    config.fog_public = true
     config.fog_attributes = { cache_control: "public, max-age=#{365.days.to_i}" } # optional, defaults to {}
+    config.storage = :fog
   end
 end
 
