@@ -18,6 +18,7 @@ gem 'bootstrap'
 gem 'jquery-rails'
 gem 'sidekiq'
 gem 'phonelib'
+gem "fog-aws"
 
 
 group :development, :test do

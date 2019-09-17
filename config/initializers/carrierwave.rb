@@ -20,8 +20,22 @@ if Rails.env.test?
       end
     end
   end
+  CarrierWave.configure do |config|
+    config.asset_host = ActionController::Base.asset_host
+  end
+else
+  CarrierWave.configure do |config|
+    config.fog_credentials = {
+        provider:              'AWS',
+        aws_access_key_id:     'AKIAJPHXIT4ZSDOEPJVQ',
+        aws_secret_access_key: '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',
+        region:                'us-east-1',
+    }
+    config.fog_directory  = 'csv-springbig-uploads'                                      # required
+    config.fog_public     = true                                                 # optional, defaults to true
+    config.fog_attributes = { cache_control: "public, max-age=#{365.days.to_i}" } # optional, defaults to {}
+  end
 end
 
-# CarrierWave.configure do |config|
-#   config.asset_host = ActionController::Base.asset_host
-# end
+
+
